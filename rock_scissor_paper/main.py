@@ -1,53 +1,63 @@
 import random
-import math
+from random import choice
 
-def play():
-    user = input("What's your choice? 'R' for rock, 'P' for paper, 'S' for scissors\n")
-    user = user.lower()
+while True:
+    print("=====Rock, Paper, ScissorsGame: Build with Python Language=====")
+    print("\n")
 
-    computer = random.choice(['R', 'P', 'S'])
+    name = input("Player please enter you name:\n")
+    print("Your are welcome", name, "!")
+    print("\n")
 
-    if user == computer:
-        return (0, user, computer)
 
-    # R > S, S > P, P > R
-    if is_win(user, computer):
-        return (1, user, computer)
+    user_pick = input("Please select options in capital letters: Enter R for Rock, P for  Paper or S for Scissors:\n")
 
-    return (-1, user, computer)
-
-def is_win(player, opponent):
-    # return true is the player beats the opponent
-    # winning conditions: r > s, s > p, p > r
-    if (player == 'R' and opponent == 'S') or (player == 'S' and opponent == 'P') or (player == 'P' and opponent == 'R'):
-        return True
-    return False
-
-def play_best_of(n):
-    # play against the computer until someone wins best of n games
-    # to win, you must win ceil(n/2) games (ie 2/3, 3/5, 4/7)
-    player_wins = 0
-    computer_wins = 0
-    wins_necessary = math.ceil(n/2)
-    while player_wins < wins_necessary and computer_wins < wins_necessary:
-        result, user, computer = play()
-        # tie
-        if result == 0:
-            print('It is a tie. You and the computer have both chosen {}. \n'.format(user))
-        # you win
-        elif result == 1:
-            player_wins += 1
-            print('You chose {} and the computer chose {}. You won!\n'.format(user, computer))
-        else:
-            computer_wins += 1
-            print('You chose {} and the computer chose {}. You lost :(\n'.format(user, computer))
-
-    if player_wins > computer_wins:
-        print('You have won the best of {} games! What a champ :D'.format(n))
+    if user_pick == "R" or user_pick == "P" or user_pick == "S":
+        print(name, "Your choice is been processed. ")
     else:
-        print('Unfortunately, the computer has won the best of {} games. Better luck next time!'.format(n))
+        user_pick != "R" or user_pick != "P" or user_pick != "S"
+        print(name, "You have not clearly followed the instruction\n")
+        print(name, "you inputted an invalid letter\n")
+
+    #Computer's Choices
+    list= ["R","P","S"]
+    computer_Choice = random.choice(list)
+    if computer_Choice == 'R':
+        computer_Choice = "R"
+        print(f"Computer chooses {computer_Choice}...")
+    if computer_Choice == 'P':
+        computer_Choice = "P"
+        print(f"Computer chooses {computer_Choice}...")
+    if computer_Choice == 'S':
+        computer_Choice = "S"
+        print(f"Computer chooses {computer_Choice}...")
 
 
-if __name__ == '__main__':
-    play_best_of(3) # 2
+    if user_pick == computer_Choice:
+        print("Try Again!! You and the Computer picked the same thing")
 
+    #How I can loose to the CPU
+    if user_pick == "R" and computer_Choice == "P":
+        print("[Paper covers Rock]")
+        print("oops!!! Computer WINS!!!")
+    if user_pick == "P" and computer_Choice == "R":
+        print("[Paper covers Rock]")
+        print(f"Congrats!!! {name} WINS!!!")
+
+    if user_pick == "S" and computer_Choice == "R":
+        print("[Rock Smashes Scissors]")
+        print("Oops!!! Computer WINS!!!")
+    if user_pick == "R" and computer_Choice == "S":
+        print("[Rock smashes Scissors]")
+        print(f"Congrats!!! {name} WINS!!!")
+
+    if user_pick == "P" and computer_Choice == "S":
+        print("[Scissors cut Paper]")
+        print("Oops!!! Computer WINS!!!")
+    if user_pick == "S" and computer_Choice == "P":
+        print("[Scissors cut Paper]")
+        print(f"Congrats!!! {name} WINS!!!")
+
+    exit = input("\nWould you like to play game? Y/N  ")
+    if exit=="N":
+        break
