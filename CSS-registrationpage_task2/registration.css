@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .u-body {
+        margin: 0;
+        color: #FDF9F8;
+        /* height: 100vh; */
+        font-size: 16px;
+        background-color: #FF7978;
+        font-family: Poppins;
+        background-image: url('./images/bg-intro-desktop.png');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .u-main {
+        width: 80%;
+        padding: 8rem 20px;
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .u-section {
+        /* background-color: black; */
+        /* padding: 20px; */
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .flexbox1 {
+        width: 42%;
+    }
+
+    .flexbox2 {
+        width: 48%;
+        align-self: flex-start;
+    }
+
+    .u-rounded {
+        border-radius: 0.4rem;
+    }
+
+    a {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .flexbox2>a {
+        background-color: hsl(248, 32%, 49%);
+        /* #5D54A3; */
+        color: inherit;
+        padding: 15px 10px;
+        font-size: 0.9rem;
+        width: 100%;
+        display: block;
+        box-shadow: 0px 0.4em rgb(219, 112, 112);
+
+    }
+
+    .flexbox2 form {
+        background-color: #FFFFFF;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 35px;
+    }
+
+    .flexbox2 form>div {
+        margin-bottom: 20px;
+    }
+
+    .flexbox2 form p {
+        color: hsl(246, 25%, 77%);
+    }
+
+    .flexbox2 form p .term {
+        color: hsl(0, 100%, 74%);
+        font-weight: 600;
+    }
+
+    input:not(input[type="submit"]) {
+        font-size: 0.96rem;
+        width: 100%;
+        padding: 15px 15px 15px 26px;
+        color: rgb(29, 7, 42);
+        outline: unset;
+        border: 1.7px solid rgb(233, 230, 230);
+        font-weight: 700;
+
+        border-radius: 5px;
+    }
+
+    input:not(input[type="submit"]):focus {
+        border-color: hsl(246, 25%, 77%);
+    }
+
+    
+
+    input[type="submit"] {
+        background-color: hsl(154, 59%, 51%);
+        color: #FDF9F8;
+        border: unset;
+        padding: 15px 10px;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 600;
+        box-shadow: 0px .2em rgb(93, 154, 126);
+
+    }
+
+    div.action {
+        margin-bottom: 10px !important;
+    }
+
+    .flexbox2>a>span {
+        font-size: 0.9rem;
+    }
+
+    .u-section>h1 {
+        margin: 0;
+        line-height: 2.8rem;
+        font-weight: 700;
+        font-size: 2.6rem;
+    }
+
+    .u-section>p {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+        font-weight: 600;
+    }
+
+    .u-section form p {
+        margin: 0;
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 1.4rem;
+    }
+
+
+    @media only screen and (max-width: 375px) {
+        .u-main,
+        .u-section {
+            width: 100%;
+        }
+
+        .u-main {
+            padding: 8rem 15px;
+        }
+
+        .flexbox2 form {
+            padding: 20px;
+        }
+
+        .u-section>p {
+            font-size: .9rem;
+            line-height: 1.6rem;
+        }
+
+        .u-section>h1 {
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+
+        .flexbox1 {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    
+    @media only screen and (min-width: 376px) and (max-width: 767px) {
+        .u-main {
+            width: 88%;
+        }
+    @media only screen and (min-width: 768px) and (max-width: 1440px) {
+
+         }
+        .u-section {
+            width: 100%;
+        }
+
+        .flexbox2 form {
+            padding: 20px;
+        }
+
+        .flexbox1 {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .u-section>p {
+            color: #FDF9F8;
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+        }
+
+        .u-section form p {
+            font-size: .9rem;
+        }
+
+        .u-section>h1 {
+            font-weight: 700;
+            line-height: 2.2rem;
+            font-size: 1.5rem;
+        }
+        
+    }
+
+    
+    
