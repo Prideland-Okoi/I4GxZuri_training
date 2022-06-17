@@ -18,10 +18,10 @@ def read_file_content():
 
 def count_words():
     text = read_file_content()
+    count = dict()
     # after reading the words, we split to individual words
     result = text.split()
     # the words are used to form a library
-    count = dict()
 
     for result in result:
         if result in count:

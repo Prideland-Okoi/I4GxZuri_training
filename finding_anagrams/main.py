@@ -17,7 +17,7 @@ def find_anagram():
     #compare strings to check if they are anagram of each other
     if sorted_str1 == sorted_str2:
         print("Inputted strings are anagram of each other")
-        #return True
+    #return True
     else:
         print("Inputted strings are not anagram of each other")
         #return False
