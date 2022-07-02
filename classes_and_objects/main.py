@@ -1,8 +1,8 @@
 class Student:
 
-    # The init method or constructor
+# The init method or constructor
     def __init__(self, name, age, tracks, score):
-        # Instance Variable
+# Instance Variable
         self.name = name
         self.age = age
         self.tracks = tracks
@@ -18,7 +18,7 @@ class Student:
         print("Updated Information: My age is ", change_age)
 
     def add_track(self, change_track):
-        self.tracks = change_track
+        self.tracks.append(change_track)
         print("Updated information: I am a student of track ", change_track)
 
 # Retrieves instance variable
