@@ -1,3 +1,5 @@
+https://prideland-okoi.github.io/flexboxtask/ A) Recreate a 3-column card design using CSS Flexbox Layout
+
 I am an **Ingressive for Good + Zuri student**. Being offered a scholarship for Full stack software engineering, this repository contains all my Tasks.
 
 ##Technologies
